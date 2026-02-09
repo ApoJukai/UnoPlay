@@ -1,0 +1,19 @@
+[build]
+  publish = "out"
+  functions = "functions"
+
+[dev]
+  command = "npm run dev"
+  port = 3000
+
+[build.environment]
+  NODE_VERSION = "16.x"
+
+[headers]
+  /*
+    - Content-Security-Policy: "default-src 'self'; style-src 'self' 'unsafe-inline';"
+    - Strict-Transport-Security: "max-age=31536000; includeSubDomains"
+    - X-Content-Type-Options: "nosniff"
+    - X-Frame-Options: "DENY"
+    - X-XSS-Protection: "1; mode=block"
+  
